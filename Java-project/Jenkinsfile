@@ -5,7 +5,7 @@ stage('Initilize'){
 }
 stage('clone'){
 git branch: 'master',
-credentialsId: '44ce4a49-2ecb-47c5-8f3f-2a9002fa0a13',
+credentialsId: 'edb1f7cf-30e1-40cb-8591-5044e6b23e28',
 url: 'https://github.com/babu479/Sunday.git'
 }
 stage('Build'){
@@ -13,7 +13,5 @@ sh '''
 cd Java-project
 mvn clean install'''
 }
-stage('Deploy'){
-build job: 'Deploy'
-}
+
 }
