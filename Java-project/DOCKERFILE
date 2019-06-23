@@ -1,5 +1,5 @@
 FROM babu479/apache-tomcat
-COPY /root/java-web-project/java-web-project.war /
-ENTRYPOINT["java", "-jar", "/java-web-project.war"]
+COPY /home/sindhura/.jenkins/workspace/task1/Java-project/target/java-web-project.war /
+ENTRYPOINT["java", "-jar", "/java-web-project.wa"]
 
 
