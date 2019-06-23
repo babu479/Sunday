@@ -15,7 +15,9 @@ mvn clean install'''
 }
  stage('Docker-Image'){
   sh '''
+  pwd
   cd Java-project
+  pwd
   sudo docker build -t first-image .
   '''
  }
