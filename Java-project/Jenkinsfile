@@ -16,12 +16,12 @@ mvn clean install'''
  stage('Docker-Image'){
   sh '''
   cd Java-project
-  docker build -t first-image .
+  sudo docker build -t first-image .
   '''
  }
  stage('docker-run'){
   sh '''
-  docker run -d -p 8081:8080 first-image
+  sudo docker run -d -p 8081:8080 first-image
   '''
  }
 }
