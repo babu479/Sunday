@@ -6,10 +6,12 @@ stage('Initilize'){
 stage('clone'){
 git branch: 'master',
 credentialsId: '7b25d3fe-425b-4b0b-bfb6-827587a7fcb8',
-url: 'https://github.com/Mercurial007/Task1.git'
+url: 'https://github.com/babu479/Sunday.git'
 }
 stage('Build'){
-sh "mvn clean install"
+sh '''
+cd Java-project
+mvn clean install'''
 }
 stage('Deploy'){
 build job: 'Deploy'
